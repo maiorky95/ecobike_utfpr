@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bluetoothgrafico2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+<uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/marcos"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.bluetoothgrafico2.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity 
+            android:name="com.example.bluetoothgrafico2.PairedDevices" 
+            android:label="Paired Devices" 
+            android:parentActivityName=".MainActivity"> </activity>
+        
+		<activity android:name="com.example.bluetoothgrafico2.DiscoveredDevices" 
+		    android:label="Discovered Devices"
+		     android:parentActivityName=".MainActivity">
+             </activity>
+       <activity android:name="com.example.bluetoothgrafico2.user1" 
+		    android:label="User1"
+		     android:parentActivityName=".MainActivity">
+             </activity>
+       <activity android:name="com.example.bluetoothgrafico2.grafico" 
+		    android:label="grafico"
+		     android:parentActivityName=".MainActivity">
+             </activity>
+    </application>
+
+</manifest>
